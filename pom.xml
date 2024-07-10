@@ -60,9 +60,7 @@
             </dependency>
         
             <!-- For development tools like automatic restart -->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-            </dependency>
+          
     </dependencies>
 
     <build>
