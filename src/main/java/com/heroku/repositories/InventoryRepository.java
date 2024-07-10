@@ -1,4 +1,4 @@
-package com.heroku.java.repositories;
+package com.heroku.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import com.heroku.java.models.Inventory;
