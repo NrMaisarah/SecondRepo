@@ -1,6 +1,6 @@
 package com.heroku.java.models;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "petfood")
@@ -48,21 +48,6 @@ public class Petfood extends Inventory {
         this.foodType = foodType;
     }
 
-    // You might want to add a toString() method for debugging
-    @Override
-    public String toString() {
-        return "Petfood{" +
-                "inventoryID=" + getInventoryID() +
-                ", inventoryName='" + getInventoryName() + '\'' +
-                ", inventoryCategory='" + getInventoryCategory() + '\'' +
-                ", inventoryBrand='" + getInventoryBrand() + '\'' +
-                ", inventoryPrice=" + getInventoryPrice() +
-                ", inventoryQuantityExisting=" + getInventoryQuantityExisting() +
-                ", inventoryReorderPoint=" + getInventoryReorderPoint() +
-                ", staffID=" + getStaffID() +
-                ", foodWeight=" + foodWeight +
-                ", quantityIn=" + quantityIn +
-                ", foodType='" + foodType + '\'' +
-                '}';
-    }
+    
+    
 }
