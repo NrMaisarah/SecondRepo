@@ -1,80 +1,55 @@
 package com.heroku.java.models;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "inventory")
 public class Inventory {
 
-  int inventoryID;
-   String inventoryName;
-  String inventoryCategory;
-  String inventoryBrand;
-   double inventoryPrice;
-  int inventoryQuantityExisting;
-   int inventoryReorderPoint;
- int staffID;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "inventory_id")
+    private Integer inventoryID;
 
-  public Inventory(){
-  }
-  public int getInventoryID() {
-    return inventoryID;
-  }
-  public void setInventoryID(int inventoryID) {
-    this.inventoryID = inventoryID;
-  }
-  
-  public String getInventoryName() {
-    return inventoryName;
-  }
-  public void setInventoryName(String inventoryName) {
-    this.inventoryName = inventoryName;
-  }
-  
-  public String getInventoryBrand() {
-    return inventoryBrand;
-  }
-  
-  public void setInventoryBrand(String inventoryBrand) {
-    this.inventoryBrand = inventoryBrand;
-  }
-  
-  public String getInventoryCategory() {
-    return inventoryCategory;
-  }
-  
-  public void setInventoryCategory(String inventoryCategory) {
-    this.inventoryCategory = inventoryCategory;
-  }
+    @Column(name = "inventory_name")
+    private String inventoryName;
 
-  public double getInventoryPrice() {
-    return inventoryPrice;
-  }
-  
-  public void setInventoryPrice(double inventoryPrice) {
-    this.inventoryPrice = inventoryPrice;
-  }
-  
-  
-  public int getInventoryQuantityExisting() {
-    return inventoryQuantityExisting;
-  }
-  
-  public void setInventoryQuantityExisting(int inventoryQuantityExisting) {
-    this.inventoryQuantityExisting = inventoryQuantityExisting;
-  }
-    
-    public int getInventoryReorderPoint() {
-        return inventoryReorderPoint;
-      }
-      public void setInventoryReorderPoint(int inventoryReorderPoint) {
-        this.inventoryReorderPoint = inventoryReorderPoint;
-      }
-      
-      public int getStaffID() {
-          return staffID;
-        }
-        public void setStaffID(int staffID) {
-          this.staffID = staffID;
-        }
-      
-      
-     
+    @Column(name = "inventory_category")
+    private String inventoryCategory;
+
+    @Column(name = "inventory_brand")
+    private String inventoryBrand;
+
+    @Column(name = "inventory_price")
+    private Double inventoryPrice;
+
+    @Column(name = "inventory_quantity_existing")
+    private Integer inventoryQuantityExisting;
+
+    @Column(name = "inventory_reorder_point")
+    private Integer inventoryReorderPoint;
+
+    @Column(name = "staff_id")
+    private Integer staffID;
+
+    // Constructors, getters, and setters
+
+    public Inventory() {}
+
+    // Getters and setters (keep your existing ones)
+
+    // You might want to add a toString() method for debugging
+    @Override
+    public String toString() {
+        return "Inventory{" +
+                "inventoryID=" + inventoryID +
+                ", inventoryName='" + inventoryName + '\'' +
+                ", inventoryCategory='" + inventoryCategory + '\'' +
+                ", inventoryBrand='" + inventoryBrand + '\'' +
+                ", inventoryPrice=" + inventoryPrice +
+                ", inventoryQuantityExisting=" + inventoryQuantityExisting +
+                ", inventoryReorderPoint=" + inventoryReorderPoint +
+                ", staffID=" + staffID +
+                '}';
+    }
 }
-
